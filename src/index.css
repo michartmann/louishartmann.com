@@ -1,0 +1,73 @@
+@import "tailwindcss";
+
+@theme {
+  --color-background: hsl(0 0% 4%);
+  --color-foreground: hsl(0 0% 95%);
+  --color-card: hsl(0 0% 8%);
+  --color-card-foreground: hsl(0 0% 95%);
+  --color-border: hsl(0 0% 15%);
+  --color-muted: hsl(0 0% 12%);
+  --color-muted-foreground: hsl(0 0% 60%);
+
+  --color-electric-pink: #e23d8b;
+  --color-electric-blue: #3b82f6;
+  --color-neon-green: #16a34a;
+  --color-racing-orange: #f97316;
+  --color-racing-gold: #eab308;
+  --color-navy-racing: hsl(221 39% 11%);
+  --color-silver-accent: hsl(210 7% 70%);
+
+  --font-sans: ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+
+  --animate-fade-in-up: fade-in-up 0.6s ease-out forwards;
+  --animate-pulse-glow: pulse-glow 2s ease-in-out infinite;
+
+  --radius: 0.5rem;
+}
+
+@keyframes fade-in-up {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes pulse-glow {
+  0%, 100% {
+    opacity: 1;
+    box-shadow: 0 0 15px rgba(0, 255, 136, 0.3);
+  }
+  50% {
+    opacity: 0.8;
+    box-shadow: 0 0 25px rgba(0, 255, 136, 0.5);
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 80px;
+}
+
+body {
+  background-color: var(--color-background);
+  color: var(--color-foreground);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overscroll-behavior: none;
+  margin: 0;
+}
+
+.fade-section {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+.fade-section.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
