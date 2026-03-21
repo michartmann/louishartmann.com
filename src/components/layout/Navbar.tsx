@@ -26,7 +26,7 @@ export function Navbar() {
     <nav className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-md border-b border-border">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 flex items-center justify-between h-16">
         <button onClick={() => scrollTo("home")} className="flex items-center gap-3">
-          <img src="/assets/lh-racing-logo.png" alt="LH Racing" className="h-10 w-10 rounded-full object-cover" />
+          <img src="/assets/lh-racing-logo.jpg" alt="LH Racing" className="h-10 w-10 rounded-full object-cover" />
           <div className="text-left">
             <span className="text-sm font-bold tracking-wider text-foreground">LOUIS HARTMANN</span>
             <div className="flex items-center gap-2 text-xs text-muted-foreground">

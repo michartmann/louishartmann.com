@@ -73,7 +73,7 @@ export function Hero() {
           <div className="relative">
             <div className="absolute -inset-1 bg-gradient-to-r from-electric-pink to-electric-blue rounded-2xl blur-lg opacity-30" />
             <img
-              src="/assets/louis-portrait.png"
+              src="/assets/louis-portrait.jpg"
               alt="Louis Hartmann in XCEL Motorsport racing suit"
               className="relative w-64 sm:w-80 lg:w-96 rounded-2xl object-cover"
             />
