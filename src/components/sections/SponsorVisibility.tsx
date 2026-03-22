@@ -9,7 +9,7 @@ const placements = [
     zones: ["Side Panel", "Top Center", "Back Display"],
     icon: Camera,
     extras: ["Podium Close-ups", "Interview Visibility", "Premium Positioning"],
-    image: "/assets/louis-portrait.jpg",
+    image: "/assets/louis-racing-action.jpg",
   },
   {
     title: "Suit & Name Sponsorship",
@@ -27,7 +27,7 @@ const placements = [
     zones: ["Kart Sidepod", "Nose Cone", "Suit Integration"],
     icon: Video,
     extras: ["24+ Races/Year", "Multi-Camera", "Live Broadcast"],
-    image: "/assets/louis-portrait.jpg",
+    image: "/assets/louis-racing-action.jpg",
   },
 ]
 
