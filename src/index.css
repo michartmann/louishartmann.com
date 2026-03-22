@@ -2,6 +2,7 @@
 
 @theme {
   --color-background: hsl(0 0% 4%);
+  --color-background-alt: hsl(0 0% 6%);
   --color-foreground: hsl(0 0% 95%);
   --color-card: hsl(0 0% 8%);
   --color-card-foreground: hsl(0 0% 95%);
@@ -21,6 +22,7 @@
 
   --animate-fade-in-up: fade-in-up 0.6s ease-out forwards;
   --animate-pulse-glow: pulse-glow 2s ease-in-out infinite;
+  --animate-count-up: count-up 1.5s ease-out forwards;
 
   --radius: 0.5rem;
 }
@@ -47,6 +49,12 @@
   }
 }
 
+@keyframes dash-move {
+  to {
+    stroke-dashoffset: -20;
+  }
+}
+
 html {
   scroll-behavior: smooth;
   scroll-padding-top: 80px;
@@ -70,4 +78,23 @@ body {
 .fade-section.visible {
   opacity: 1;
   transform: translateY(0);
+}
+
+/* Gradient section divider */
+.section-divider {
+  height: 1px;
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    var(--color-electric-pink) 30%,
+    var(--color-electric-blue) 70%,
+    transparent 100%
+  );
+  opacity: 0.4;
+}
+
+/* Dot grid pattern overlay */
+.dot-grid {
+  background-image: radial-gradient(circle, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+  background-size: 24px 24px;
 }

@@ -46,7 +46,7 @@ export function Navbar() {
               className={cn(
                 "px-4 py-2 text-sm font-medium rounded-lg transition-colors",
                 activeId === item.id
-                  ? "text-electric-pink bg-electric-pink/10"
+                  ? "text-electric-pink bg-electric-pink/10 shadow-[0_0_8px_rgba(226,61,139,0.15)]"
                   : "text-muted-foreground hover:text-foreground hover:bg-muted"
               )}
             >

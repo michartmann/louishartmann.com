@@ -12,7 +12,7 @@ export function Ambassador() {
   const { ref, isVisible } = useFadeIn()
 
   return (
-    <section className="py-20 px-4 sm:px-6 bg-card/50">
+    <section className="py-20 px-4 sm:px-6 bg-background-alt">
       <div ref={ref} className={`max-w-4xl mx-auto fade-section ${isVisible ? "visible" : ""}`}>
         <h2 className="text-3xl sm:text-4xl font-bold text-center mb-4">
           UAE's Champion for{" "}
@@ -39,7 +39,7 @@ export function Ambassador() {
           {impacts.map((item) => (
             <div
               key={item.label}
-              className="bg-card border border-border rounded-xl p-4 text-center hover:border-neon-green/30 transition-colors"
+              className="bg-card border border-border rounded-xl p-4 text-center hover:border-neon-green/30 hover:scale-[1.03] transition-all duration-200"
             >
               <item.icon size={24} className="mx-auto mb-2 text-neon-green" />
               <p className="text-xs text-muted-foreground">{item.label}</p>

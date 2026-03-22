@@ -1,5 +1,5 @@
 import { useFadeIn } from "@/hooks/useFadeIn"
-import { Tv } from "lucide-react"
+import { Tv, ExternalLink } from "lucide-react"
 
 const links = [
   {
@@ -8,6 +8,7 @@ const links = [
     description:
       "Professional multi-camera broadcasts with live commentary. Louis competes in 15+ televised races per season.",
     live: true,
+    url: "https://www.youtube.com/@RotaxKartingUAE",
   },
   {
     title: "IAME Live Coverage",
@@ -15,18 +16,21 @@ const links = [
     description:
       "High-quality race coverage featuring replays, podium ceremonies, and championship updates. 9+ broadcast races per season.",
     live: true,
+    url: "https://www.youtube.com/@IAMESeriesUAE",
   },
   {
     title: "Rotax Championship Hub",
     subtitle: "Official Championship Platform",
     description:
       "Official UAE Rotax Max Challenge platform featuring race results, championship standings, and driver profiles.",
+    url: "https://www.rotaxmaxchallenge.com",
   },
   {
     title: "IAME Series Hub",
     subtitle: "Official Series Platform",
     description:
       "Official IAME UAE series website with schedules, results, and news.",
+    url: "https://www.iameseriesuae.com",
   },
 ]
 
@@ -34,7 +38,7 @@ export function LiveCoverage() {
   const { ref, isVisible } = useFadeIn()
 
   return (
-    <section className="py-20 px-4 sm:px-6 bg-card/50">
+    <section className="py-20 px-4 sm:px-6 bg-background-alt">
       <div ref={ref} className={`max-w-5xl mx-auto fade-section ${isVisible ? "visible" : ""}`}>
         <h2 className="text-2xl sm:text-3xl font-bold text-center mb-8">
           Live Race Coverage &{" "}
@@ -49,9 +53,12 @@ export function LiveCoverage() {
 
         <div className="grid sm:grid-cols-2 gap-4">
           {links.map((link) => (
-            <div
+            <a
               key={link.title}
-              className="bg-card border border-border rounded-xl p-5 hover:border-electric-blue/30 transition-colors"
+              href={link.url}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="group bg-card border border-border rounded-xl p-5 hover:border-electric-blue/30 hover:scale-[1.02] transition-all duration-200 block"
             >
               <div className="flex items-center gap-2 mb-2">
                 {link.live && (
@@ -61,11 +68,17 @@ export function LiveCoverage() {
                   </span>
                 )}
                 <Tv size={16} className="text-electric-blue" />
+                <ExternalLink
+                  size={14}
+                  className="ml-auto text-muted-foreground opacity-0 group-hover:opacity-100 transition-opacity"
+                />
               </div>
-              <h3 className="text-base font-bold mb-1">{link.title}</h3>
+              <h3 className="text-base font-bold mb-1 group-hover:text-electric-blue transition-colors">
+                {link.title}
+              </h3>
               <p className="text-xs text-electric-blue mb-2">{link.subtitle}</p>
               <p className="text-xs text-muted-foreground">{link.description}</p>
-            </div>
+            </a>
           ))}
         </div>
 

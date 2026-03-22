@@ -12,20 +12,34 @@ import { SponsorVisibility } from "@/components/sections/SponsorVisibility"
 import { SocialConnect } from "@/components/sections/SocialConnect"
 import { LiveCoverage } from "@/components/sections/LiveCoverage"
 
+function SectionDivider() {
+  return <div className="section-divider" />
+}
+
 function App() {
   return (
     <div className="min-h-screen bg-background text-foreground">
       <Navbar />
       <Hero />
+      <SectionDivider />
       <Story />
+      <SectionDivider />
       <RacingProgression />
+      <SectionDivider />
       <Education />
+      <SectionDivider />
       <RacingCalendar />
+      <SectionDivider />
       <Timeline />
+      <SectionDivider />
       <Ambassador />
+      <SectionDivider />
       <Partnerships />
+      <SectionDivider />
       <SponsorVisibility />
+      <SectionDivider />
       <SocialConnect />
+      <SectionDivider />
       <LiveCoverage />
       <Footer />
     </div>

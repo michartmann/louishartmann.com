@@ -3,43 +3,44 @@ import { Instagram, ExternalLink, ArrowRight } from "lucide-react"
 export function Hero() {
   return (
     <section id="home" className="relative min-h-screen flex items-center pt-16 overflow-hidden">
-      {/* Background gradient */}
+      {/* Background gradient + dot grid */}
       <div className="absolute inset-0 bg-gradient-to-b from-electric-pink/5 via-background to-background" />
+      <div className="absolute inset-0 dot-grid" />
 
-      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 py-16 md:py-24 grid md:grid-cols-2 gap-8 md:gap-12 items-center">
+      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 py-12 sm:py-16 md:py-24 grid md:grid-cols-2 gap-8 md:gap-12 items-center w-full">
         {/* Text content */}
         <div className="order-2 md:order-1 text-center md:text-left">
           <div className="inline-block px-3 py-1 mb-4 text-xs font-semibold uppercase tracking-widest text-neon-green bg-neon-green/10 border border-neon-green/20 rounded-full">
             IAME Summer Cup Champion 2025
           </div>
-          <h1 className="text-5xl sm:text-6xl lg:text-7xl font-black tracking-tight mb-4">
+          <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black tracking-tight mb-4">
             <span className="bg-gradient-to-r from-electric-pink to-electric-blue bg-clip-text text-transparent">
               LOUIS
             </span>
             <br />
             <span className="text-foreground">HARTMANN</span>
           </h1>
-          <p className="text-muted-foreground text-base sm:text-lg max-w-xl mb-6 leading-relaxed">
+          <p className="text-muted-foreground text-sm sm:text-base md:text-lg max-w-xl mb-6 leading-relaxed mx-auto md:mx-0">
             Racing debut: Dubai Kartdrome, November 5, 2023. Danish champion transforming
             neurodiversity into competitive advantage in professional motorsport.
           </p>
-          <p className="text-sm text-muted-foreground mb-8">
+          <p className="text-xs sm:text-sm text-muted-foreground mb-8">
             Next target: <span className="text-electric-blue font-semibold">F4</span> →{" "}
             <span className="text-racing-orange font-semibold">F3/GT</span> →{" "}
             <span className="text-racing-gold font-semibold">Professional Driver Career</span>
           </p>
 
-          <div className="flex flex-wrap gap-3 justify-center md:justify-start mb-8">
+          <div className="flex flex-col sm:flex-row gap-3 justify-center md:justify-start mb-8">
             <button
               onClick={() => document.getElementById("racing")?.scrollIntoView({ behavior: "smooth" })}
-              className="inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-electric-pink to-electric-blue text-white font-semibold rounded-full hover:opacity-90 transition-opacity"
+              className="inline-flex items-center justify-center gap-2 px-6 py-3 bg-gradient-to-r from-electric-pink to-electric-blue text-white font-semibold rounded-full hover:opacity-90 transition-opacity"
             >
               View Racing Journey
               <ArrowRight size={16} />
             </button>
             <button
               onClick={() => document.getElementById("partners")?.scrollIntoView({ behavior: "smooth" })}
-              className="inline-flex items-center gap-2 px-6 py-3 border border-border text-foreground font-semibold rounded-full hover:bg-muted transition-colors"
+              className="inline-flex items-center justify-center gap-2 px-6 py-3 border border-border text-foreground font-semibold rounded-full hover:bg-muted transition-colors"
             >
               Partnership Opportunities
             </button>
@@ -75,14 +76,14 @@ export function Hero() {
             <img
               src="/assets/louis-portrait.jpg"
               alt="Louis Hartmann in XCEL Motorsport racing suit"
-              className="relative w-64 sm:w-80 lg:w-96 rounded-2xl object-cover"
+              className="relative w-48 sm:w-64 md:w-80 lg:w-96 rounded-2xl object-cover"
             />
           </div>
         </div>
       </div>
 
       {/* Bottom badge */}
-      <div className="absolute bottom-8 left-1/2 -translate-x-1/2">
+      <div className="absolute bottom-6 sm:bottom-8 left-1/2 -translate-x-1/2">
         <div className="px-4 py-2 bg-card border border-border rounded-full text-xs text-muted-foreground">
           Future Path: Karting to GT Driver
         </div>

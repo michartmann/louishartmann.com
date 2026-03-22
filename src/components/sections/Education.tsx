@@ -45,7 +45,7 @@ export function Education() {
 
         {/* Academic info */}
         <div className="grid md:grid-cols-2 gap-6 mb-12">
-          <div className="bg-card border border-border rounded-xl p-6">
+          <div className="bg-card border border-border rounded-xl p-6 hover:border-electric-blue/30 hover:scale-[1.01] transition-all duration-200">
             <h3 className="text-lg font-bold mb-1">Academic Excellence</h3>
             <p className="text-sm text-muted-foreground mb-3">IB Career-related Programme (CP)</p>
             <div className="space-y-2 text-sm">
@@ -63,7 +63,7 @@ export function Education() {
               analysis capabilities.
             </p>
           </div>
-          <div className="bg-card border border-border rounded-xl p-6">
+          <div className="bg-card border border-border rounded-xl p-6 hover:border-neon-green/30 hover:scale-[1.01] transition-all duration-200">
             <h3 className="text-lg font-bold mb-1 text-neon-green">Fairgreen International School</h3>
             <p className="text-sm text-muted-foreground leading-relaxed">
               UAE's leading inclusive education environment that celebrates and supports diverse

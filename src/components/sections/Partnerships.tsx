@@ -1,6 +1,6 @@
 import { useFadeIn } from "@/hooks/useFadeIn"
 import { partnerships } from "@/data/partnerships"
-import { Check, ArrowRight } from "lucide-react"
+import { Check, ArrowRight, Mail } from "lucide-react"
 import { cn } from "@/lib/utils"
 
 export function Partnerships() {
@@ -27,10 +27,10 @@ export function Partnerships() {
             <div
               key={p.title}
               className={cn(
-                "bg-card border rounded-xl p-6 flex flex-col",
+                "bg-card border rounded-xl p-6 flex flex-col hover:scale-[1.02] transition-all duration-200",
                 p.premium
-                  ? "border-racing-gold/40 ring-1 ring-racing-gold/20"
-                  : "border-border"
+                  ? "border-racing-gold/40 ring-1 ring-racing-gold/20 hover:ring-racing-gold/40 hover:shadow-[0_0_20px_rgba(234,179,8,0.1)]"
+                  : "border-border hover:border-electric-pink/30"
               )}
             >
               {p.premium && (
@@ -64,16 +64,9 @@ export function Partnerships() {
               href="mailto:racing@louishartmann.com"
               className="inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-racing-gold to-racing-orange text-white font-semibold rounded-full hover:opacity-90 transition-opacity"
             >
+              <Mail size={16} />
               Get Sponsorship Package
               <ArrowRight size={16} />
-            </a>
-            <a
-              href="https://wa.me/message/YOUR_WHATSAPP_LINK"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 px-6 py-3 border border-neon-green text-neon-green font-semibold rounded-full hover:bg-neon-green/10 transition-colors"
-            >
-              Quick WhatsApp Chat
             </a>
           </div>
         </div>

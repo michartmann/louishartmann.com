@@ -5,7 +5,7 @@ export function SocialConnect() {
   const { ref, isVisible } = useFadeIn()
 
   return (
-    <section id="contact" className="py-20 px-4 sm:px-6">
+    <section className="py-20 px-4 sm:px-6">
       <div ref={ref} className={`max-w-3xl mx-auto text-center fade-section ${isVisible ? "visible" : ""}`}>
         <h2 className="text-3xl sm:text-4xl font-bold mb-4">
           Connect &{" "}
@@ -23,7 +23,7 @@ export function SocialConnect() {
             href="https://www.instagram.com/louis_karting347/"
             target="_blank"
             rel="noopener noreferrer"
-            className="flex items-center gap-3 bg-card border border-border rounded-xl p-4 hover:border-electric-pink/40 transition-colors group"
+            className="flex items-center gap-3 bg-card border border-border rounded-xl p-4 hover:border-electric-pink/40 hover:scale-[1.03] transition-all duration-200 group"
           >
             <div className="w-10 h-10 rounded-full bg-electric-pink/10 flex items-center justify-center">
               <Instagram size={20} className="text-electric-pink" />
@@ -39,7 +39,7 @@ export function SocialConnect() {
             href="https://www.tiktok.com/@louis_hartmann_347"
             target="_blank"
             rel="noopener noreferrer"
-            className="flex items-center gap-3 bg-card border border-border rounded-xl p-4 hover:border-electric-blue/40 transition-colors group"
+            className="flex items-center gap-3 bg-card border border-border rounded-xl p-4 hover:border-electric-blue/40 hover:scale-[1.03] transition-all duration-200 group"
           >
             <div className="w-10 h-10 rounded-full bg-electric-blue/10 flex items-center justify-center">
               <ExternalLink size={20} className="text-electric-blue" />
